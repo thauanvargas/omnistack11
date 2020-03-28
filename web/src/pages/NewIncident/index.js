@@ -15,7 +15,7 @@ export default function NewIncident() {
   const ongId = localStorage.getItem("ongId");
   const history = useHistory();
 
-  async function handleNewIncidente(e) {
+  async function handleNewIncident(e) {
     e.preventDefault();
 
     const data = {
@@ -50,7 +50,7 @@ export default function NewIncident() {
             Voltar para Home
           </Link>
         </section>
-        <form>
+        <form onSubmit={handleNewIncident}>
           <input
             placeholder="Título do Caso"
             value={title}
@@ -68,7 +68,7 @@ export default function NewIncident() {
           />
 
           <button className="button" type="submit">
-            Cadastrar
+            Criar Incidente
           </button>
         </form>
       </div>
