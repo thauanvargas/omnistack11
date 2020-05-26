@@ -26,6 +26,7 @@ Para instalar as dependências do **Backend** executa os comandos backend:
 ```bash
 cd backend
 yarn
+npx knex migrate:latest
 yarn start
 ```
 
