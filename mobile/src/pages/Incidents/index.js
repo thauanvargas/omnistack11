@@ -3,7 +3,7 @@ import { View, FlatList, Image, Text, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Feather } from "@expo/vector-icons";
 
-import api from "../../";
+import api from "../../services/api";
 import logoImg from "../../assets/logo.png";
 
 import styles from "./styles";
@@ -55,6 +55,7 @@ export default function Incidents() {
         data={incidents}
         keyExtractor={incident => String(incident.id)}
         showsVerticalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
         onEndReached={loadIncidents}
         onEndReachedThreshold={0.2}
         renderItem={({ item: incident }) => (
@@ -81,6 +82,7 @@ export default function Incidents() {
           </View>
         )}
       />
+
     </View>
   );
 }
